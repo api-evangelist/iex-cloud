@@ -5,37 +5,130 @@ provider: IEX Cloud
 providerId: iex-cloud
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- Fintech
-- Market Data
-- Stocks
-- Reference
-- Sunset
-- Plans
-description: Placeholder plans/pricing artifact for IEX Cloud. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+  - Fintech
+  - Market Data
+  - Sunset
+  - Plans
+description: >-
+  IEX Cloud reached end-of-life on August 31, 2024. The historical pricing model was a monthly
+  subscription with a message (credit) allowance and per-endpoint message costs. Tiers commonly
+  cited from the public archive included Launch (free, 50K messages/mo), Grow ($9/mo, 5M),
+  Scale ($199/mo, 1B), and Business ($999/mo, 10B). All tiers are sunset; no new sign-ups.
+notes: Sunset 2024-08-31. Pricing preserved for historical / migration reference only.
 sources:
-- https://www.iexcloud.io/
+  - https://web.archive.org/web/20240501000000*/iexcloud.io/pricing
+  - https://iexcloud.io/community/blog/iex-cloud-end-of-life-announcement
 plans:
-- id: iex-cloud-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
-  entries:
-  - label: API Access
-    name: api_access
-    type: flat
-    metric: varies
-    limit: -1
-    timeFrame: usage
-    geo: global
-    unit: 1
-    price: see https://www.iexcloud.io/
-    userMultiplied: false
-  elements:
-  - name: Pending Reconciliation
+  - id: iex-cloud-launch
+    name: Launch (sunset)
+    type: freemium
+    description: Free tier - 50,000 messages per month - sunset 2024-08-31.
+    entries:
+      - label: Monthly subscription
+        name: launch_monthly
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Monthly message allowance
+        name: launch_messages
+        type: quota
+        metric: message
+        limit: 50000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Sunset
+  - id: iex-cloud-grow
+    name: Grow (sunset)
+    type: subscription
+    description: $9/month - 5M messages per month - sunset 2024-08-31.
+    entries:
+      - label: Monthly subscription
+        name: grow_monthly
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '9.00'
+        userMultiplied: false
+      - label: Monthly message allowance
+        name: grow_messages
+        type: quota
+        metric: message
+        limit: 5000000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Sunset
+  - id: iex-cloud-scale
+    name: Scale (sunset)
+    type: subscription
+    description: $199/month - 1B messages per month - sunset 2024-08-31.
+    entries:
+      - label: Monthly subscription
+        name: scale_monthly
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '199.00'
+        userMultiplied: false
+      - label: Monthly message allowance
+        name: scale_messages
+        type: quota
+        metric: message
+        limit: 1000000000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Sunset
+  - id: iex-cloud-business
+    name: Business (sunset)
+    type: subscription
+    description: $999/month - 10B messages per month - sunset 2024-08-31.
+    entries:
+      - label: Monthly subscription
+        name: business_monthly
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '999.00'
+        userMultiplied: false
+      - label: Monthly message allowance
+        name: business_messages
+        type: quota
+        metric: message
+        limit: 10000000000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Sunset
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

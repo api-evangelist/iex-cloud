@@ -5,31 +5,39 @@ provider: IEX Cloud
 providerId: iex-cloud
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- Fintech
-- Market Data
-- Stocks
-- Reference
-- Sunset
-- Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for IEX Cloud. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+  - Fintech
+  - Market Data
+  - Sunset
+  - Rate Limiting
+description: >-
+  IEX Cloud sunset on 2024-08-31. Historically the platform did not enforce per-second request
+  caps; instead each endpoint cost a number of "messages" against the monthly message allowance.
+  Documented hard limits included a connection cap of 50 concurrent requests and 100 messages per
+  second per token on the free tier. Information preserved for migration reference.
 sources:
-- https://www.iexcloud.io/
+  - https://web.archive.org/web/2024*/iexcloud.io/docs/api/
+  - https://iexcloud.io/community/blog/iex-cloud-end-of-life-announcement
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  - name: Concurrent requests (sunset)
+    scope: token
+    metric: concurrent_connections
+    limit: 50
+  - name: Per-second cap (Launch, sunset)
+    scope: token
+    metric: requests_per_second
+    limit: 100
+  - name: Monthly message allowance
+    scope: account
+    metric: messages_per_month
+    limit: -1
+    notes: See plan tier; usage was metered as messages per endpoint call, not request count.
 policies:
-- name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  - name: Sunset
+    description: Service end-of-life on 2024-08-31; rate limits no longer enforced because endpoints unreachable.
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -2,8 +2,7 @@ aid: iex-cloud
 url: https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/apis.yml
 name: IEX Cloud
 x-type: company
-description: >-
-  IEX Cloud was a cloud-based financial data platform from IEX Group offering market data, fundamentals, and reference APIs. Sunset August 2024 — historical reference for migration patterns.
+x-status: sunset
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Fintech
@@ -11,13 +10,52 @@ tags:
   - Stocks
   - Reference
   - Sunset
+  - Historical
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+description: >-
+  IEX Cloud was a cloud-based financial data platform from IEX Group offering market data,
+  fundamentals, news, options, and reference APIs at https://cloud.iexapis.com/v1. The service
+  was sunset on August 31, 2024 by IEX Group. The entry below is preserved as historical
+  reference for migration patterns; endpoints are no longer reachable.
+notes: IEX Cloud sunset on 2024-08-31. APIs are no longer reachable. Migrate to alternatives
+  such as Polygon.io, Tiingo, Alpha Vantage, or Finnhub.
+apis:
+  - aid: iex-cloud:core-data-api
+    name: IEX Cloud Core Data API (sunset)
+    tags:
+      - Stocks
+      - Market Data
+      - Sunset
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://cloud.iexapis.com/v1
+    humanURL: https://iexcloud.io/docs/api
+    description: >-
+      Real-time and historical US equity quotes, intraday and historical prices, OHLCV charts,
+      news, dividends, splits, options chains, fundamentals, and corporate actions. Pricing was
+      message-based: each endpoint cost a number of "credits" against a monthly allowance. SUNSET
+      August 31, 2024.
+    properties:
+      - type: Documentation
+        url: https://iexcloud.io/docs/api
+      - type: Sunset Notice
+        url: https://iexcloud.io/community/blog/iex-cloud-end-of-life-announcement
+    x-features:
+      - Real-time and historical quotes (sunset)
+      - Fundamentals and corporate actions (sunset)
+      - News, options, splits, dividends (sunset)
+      - Message-based credit pricing (sunset)
+    x-use-cases:
+      - Historical reference only
+      - Migration patterns to successor providers
 common:
-  - type: Website
+  - type: Portal
     url: https://www.iexcloud.io/
+  - type: Sunset Notice
+    url: https://iexcloud.io/community/blog/iex-cloud-end-of-life-announcement
+  - type: Documentation
+    url: https://iexcloud.io/docs/api
   - type: Plans
     url: plans/iex-cloud-plans-pricing.yml
   - type: RateLimits
