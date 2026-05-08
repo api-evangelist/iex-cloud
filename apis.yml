@@ -1,0 +1,29 @@
+aid: iex-cloud
+url: https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/apis.yml
+name: IEX Cloud
+x-type: company
+description: >-
+  IEX Cloud was a cloud-based financial data platform from IEX Group offering market data, fundamentals, and reference APIs. Sunset August 2024 — historical reference for migration patterns.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Fintech
+  - Market Data
+  - Stocks
+  - Reference
+  - Sunset
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.iexcloud.io/
+  - type: Plans
+    url: plans/iex-cloud-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/iex-cloud-rate-limits.yml
+  - type: FinOps
+    url: finops/iex-cloud-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
