@@ -1,7 +1,7 @@
 aid: iex-cloud
 url: https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/apis.yml
 name: IEX Cloud
-x-type: company
+kind: company
 x-status: sunset
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
