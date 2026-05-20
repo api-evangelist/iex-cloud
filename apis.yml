@@ -50,6 +50,10 @@ apis:
       - Historical reference only
       - Migration patterns to successor providers
 common:
+  - type: GitHubOrganization
+    url: https://github.com/iexcloud
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/iex-cloud
   - type: Portal
     url: https://www.iexcloud.io/
   - type: Sunset Notice
