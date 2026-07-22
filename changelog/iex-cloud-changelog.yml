@@ -1,0 +1,53 @@
+generated: '2026-07-22'
+method: searched
+source: https://raw.githubusercontent.com/iexcloud/docs/main/source/changelog.md
+url: https://github.com/iexcloud/docs/blob/main/source/changelog.md
+scheme: dated entries (YYYY-MM-DD), no semantic versions
+current_version: none - platform sunset 2024-08-31; changelog frozen at 2023-01-19
+notes: >-
+  The official IEX Cloud (Apperate-era) changelog survives in the public
+  github.com/iexcloud/docs repository. The service was sunset on 2024-08-31; the
+  final entries below are preserved verbatim as the recent window before the
+  documentation stopped being updated.
+entries:
+  - date: '2023-01-19'
+    breaking: true
+    highlights:
+      - POST /write deprecated and replaced with POST /record (RESTful maturity levels 1 & 2).
+  - date: '2023-01-13'
+    breaking: true
+    highlights:
+      - >-
+        Crypto endpoints deprecated: GET /crypto/{symbol}/quote, /book, /price,
+        cloud-sse cryptoEvents stream, and GET /ref-data/crypto/symbols.
+  - date: '2022-12-14'
+    breaking: false
+    highlights:
+      - Added CUSIP, ISIN and PermID URL to Knowledge Graph corpactions view.
+      - PermID (alpha) added to supported securities identifiers.
+  - date: '2022-12-13'
+    breaking: false
+    highlights:
+      - Improved POST /write speed.
+      - Added Data Timing and Update Schedule details for Core Datasets.
+  - date: '2022-12-06'
+    breaking: false
+    highlights:
+      - Hid the Secret Key from dataset overview pages.
+      - Reinstated Apperate time-series query parameters forward, future, offset, updated.
+      - Documented Apperate APIs (Data, Data Sources, Datasets, Jobs, Logs, Schedules, Credentials, Advanced).
+  - date: '2022-12-05'
+    breaking: true
+    highlights:
+      - Disabled real-time datasets for free plans.
+      - Paused Apperate input streams until data sources attach.
+  - date: '2022-12-02'
+    breaking: true
+    highlights:
+      - Egress credits charged for all active membership plans, including free plans.
+  - date: '2022-11-28'
+    breaking: true
+    highlights:
+      - Limited each Batch API call to 2,000 queries.
+      - Batch query responses now indicate errors.
+      - Fixed weekend recognition for real-time quote endpoints.

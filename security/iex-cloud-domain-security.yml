@@ -1,0 +1,29 @@
+generated: '2026-07-22'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+notes: >-
+  IEX Cloud sunset 2024-08-31. The iexcloud.io domain has lapsed out of IEX
+  Group's control - www.iexcloud.io now serves a Namecheap domain-parking lander,
+  so its TLS certificate and DNS posture below describe the parking service, not
+  IEX Group. cloud.iexapis.com (former API host) no longer answers HTTPS.
+hosts:
+- host: www.iexcloud.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 16 03:27:23 2026 GMT
+  hsts: false
+- host: iexcloud.io
+  https: false
+- host: cloud.iexapis.com
+  https: false
+domains:
+- domain: iexcloud.io
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+- domain: iexapis.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false

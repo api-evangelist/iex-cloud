@@ -1,0 +1,41 @@
+generated: '2026-07-22'
+method: searched
+source: https://raw.githubusercontent.com/iexcloud/docs/main/source/administration/access-and-security.md
+docs: https://github.com/iexcloud/docs/blob/main/source/administration/access-and-security.md
+notes: >-
+  IEX Cloud sunset on 2024-08-31; this profile is preserved from the official
+  documentation source that survives in the public github.com/iexcloud/docs
+  repository (Apperate era). No live endpoints accept these credentials anymore.
+summary:
+  types: [apiKey]
+  api_key_in: [query]
+  oauth2_flows: []
+schemes:
+  - name: publishableToken
+    type: apiKey
+    in: query
+    parameter: token
+    description: >-
+      Publishable (public) API tokens granted Core dataset read access by default;
+      could additionally be granted Premium Data access and per-dataset
+      read/write/delete permissions. Supported optional restrictions: allowed
+      domains, and core-credit usage limits per token.
+    sources:
+      - https://github.com/iexcloud/docs/blob/main/source/administration/access-and-security.md
+  - name: secretToken
+    type: apiKey
+    in: query
+    parameter: token
+    description: >-
+      Secret tokens allowed any action on data and account; docs warned never to
+      share them publicly. Hidden from dataset overview pages as of 2022-12-06.
+    sources:
+      - https://github.com/iexcloud/docs/blob/main/source/administration/access-and-security.md
+features:
+  signed_requests: >-
+    Tokens could require a signature per request (available to Business plan and
+    legacy Grow/Scale users on legacy plans).
+  domain_restriction: >-
+    Tokens could be restricted to requests originating from specified domains.
+  per_token_limits: Core-credit usage limits could be set per token.
+  token_tiers: Launch up to 2 tokens, Grow up to 50, Scale up to 1,000 (Apperate limits page).

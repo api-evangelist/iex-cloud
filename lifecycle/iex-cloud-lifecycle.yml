@@ -1,0 +1,40 @@
+generated: '2026-07-22'
+method: searched
+source: https://status.iexapis.com/
+status: retired
+sunset:
+  date: '2024-08-31'
+  notes: >-
+    IEX Cloud (IEX Group's financial data API business) reached end-of-life on
+    August 31, 2024. All API endpoints (cloud.iexapis.com, cloud-sse.iexapis.com,
+    api.iex.cloud) are unreachable. The original EOL announcement page
+    (iexcloud.io/community/blog/iex-cloud-end-of-life-announcement) is gone and has
+    no Wayback snapshot; the sunset date is preserved from the prior research round
+    (see apis.yml notes, plans/, rate-limits/, finops/).
+domain_lapse:
+  observed: '2026-07-22'
+  notes: >-
+    The iexcloud.io domain has lapsed out of IEX Group's control: www.iexcloud.io
+    now serves a Namecheap domain-parking lander. Links to iexcloud.io should be
+    treated as dead / not provider content.
+versioning:
+  scheme: uri-path
+  current: v1 (stable) at sunset
+  notes: >-
+    Legacy Core Data API versioned in the URI path (/v1, /stable, /beta). Archived
+    docs stated up to three active versions supported with advance notice before
+    releasing or retiring a version.
+  docs: https://web.archive.org/web/20241003164023/https://iexcloud.io/docs/api/
+deprecation:
+  policy_url: https://web.archive.org/web/20240611120824/https://iexcloud.io/docs/api-basics/deprecation
+  notes: >-
+    IEX Cloud published a deprecation policy page (archived) and practiced dated
+    endpoint deprecations in its changelog (e.g. Crypto endpoints deprecated
+    2023-01-13, POST /write deprecated 2023-01-19) before the platform-wide sunset.
+  sunset_header: false
+status_page: https://status.iexapis.com/
+status_page_notes: >-
+  Atlassian Statuspage titled "IEX Cloud Status" still live as of 2026-07-22
+  (HTTP 200), the last remaining operational surface of the platform.
+migration:
+  notes: Successor providers commonly cited for migration - Polygon.io, Tiingo, Alpha Vantage, Finnhub.

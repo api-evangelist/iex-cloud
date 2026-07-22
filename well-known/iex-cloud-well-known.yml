@@ -1,0 +1,33 @@
+generated: '2026-07-22'
+method: searched
+notes: >-
+  IEX Cloud sunset on 2024-08-31. As of this probe date the API hosts
+  (cloud.iexapis.com, api.iex.cloud) no longer resolve/respond, the iexcloud.io
+  apex does not respond, and www.iexcloud.io has LAPSED to a third-party domain
+  parking page (Namecheap lander) that is no longer operated by IEX Group. No
+  IEX-published /.well-known/ documents exist anywhere; nothing was saved because
+  any content now served on the lapsed domain is not the provider's. All probe
+  statuses recorded below; absence is the finding.
+hosts:
+  - host: https://www.iexcloud.io
+    host_status: 200
+    host_note: domain lapsed to Namecheap parking page; content is not IEX Group's
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://iexcloud.io
+    host_status: unreachable
+  - host: https://cloud.iexapis.com
+    host_status: unreachable
+    host_note: former Core Data API base URL; sunset 2024-08-31
+  - host: https://api.iex.cloud
+    host_status: unreachable
+    host_note: former Apperate-era API host; sunset 2024-08-31

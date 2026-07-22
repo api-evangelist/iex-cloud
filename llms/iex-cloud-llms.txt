@@ -1,0 +1,27 @@
+# IEX Cloud
+
+> IEX Cloud was a cloud-based financial data platform from IEX Group offering market data, fundamentals, news, options, and reference APIs. The service was SUNSET on August 31, 2024: all API endpoints (cloud.iexapis.com, api.iex.cloud) are unreachable, and the iexcloud.io domain has since lapsed to a third-party domain-parking page. This profile is preserved as historical reference for migration patterns. Commonly cited successor providers: Polygon.io, Tiingo, Alpha Vantage, Finnhub.
+
+Important: do not call these APIs — they no longer exist. Credentials (publishable/secret tokens) are invalid.
+
+## APIs (sunset)
+
+- [IEX Cloud Core Data API (archived docs)](https://web.archive.org/web/20241003164023/https://iexcloud.io/docs/api/): Real-time and historical US equity quotes, intraday and historical prices, OHLCV charts, news, dividends, splits, options chains, fundamentals, and corporate actions. Message/credit-based pricing. Former base URL https://cloud.iexapis.com/v1. Sunset 2024-08-31.
+
+## Surviving surfaces
+
+- [IEX Cloud Status](https://status.iexapis.com/): Statuspage still live.
+- [GitHub organization](https://github.com/iexcloud): official repos remain public (docs, SDKs, examples).
+- [Documentation source](https://github.com/iexcloud/docs): Apperate-era docs in markdown.
+- [iexjs (npm)](https://www.npmjs.com/package/iexjs): official JavaScript SDK, unmaintained.
+- [pyEX (PyPI)](https://pypi.org/project/pyEX/): official Python SDK, unmaintained.
+
+## Catalog artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/apis.yml): APIs.json index for this provider.
+- [Plans & pricing (historical)](https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/plans/iex-cloud-plans-pricing.yml)
+- [Rate limits (historical)](https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/rate-limits/iex-cloud-rate-limits.yml)
+- [Lifecycle / sunset record](https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/lifecycle/iex-cloud-lifecycle.yml)
+- [Changelog (frozen 2023-01-19)](https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/changelog/iex-cloud-changelog.yml)
+- [Authentication profile (historical)](https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/authentication/iex-cloud-authentication.yml)
+- [Packages / SDKs](https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/packages/iex-cloud-packages.yml)

@@ -1,0 +1,33 @@
+generated: '2026-07-22'
+method: searched
+source: https://github.com/iexcloud
+notes: >-
+  IEX Cloud sunset on 2024-08-31, but the first-party client libraries remain published
+  on npm and PyPI under the official github.com/iexcloud organization (Apache-2.0, not
+  archived, last pushed 2024-01-16). They target the retired cloud.iexapis.com /
+  api.iex.cloud endpoints and are preserved here for historical / migration reference.
+packages:
+  - language: javascript
+    registry: npm
+    name: iexjs
+    version: 0.4.0
+    url: https://www.npmjs.com/package/iexjs
+    install: npm install iexjs
+    repository: https://github.com/iexcloud/iexjs
+    license: Apache-2.0
+    official: true
+    status: sunset-unmaintained
+    notes: Javascript interface to IEX and IEX Cloud APIs; last publish 2022-05-05.
+  - language: python
+    registry: pypi
+    name: pyEX
+    version: 0.5.0
+    url: https://pypi.org/project/pyEX/
+    install: pip install pyEX
+    repository: https://github.com/iexcloud/pyEX
+    license: Apache-2.0
+    official: true
+    status: sunset-unmaintained
+    notes: >-
+      Python interface to IEX and IEX Cloud APIs; adopted into the official iexcloud
+      GitHub organization. Last release targets the sunset API.

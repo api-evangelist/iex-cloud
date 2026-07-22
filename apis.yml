@@ -3,7 +3,19 @@ url: https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/
 name: IEX Cloud
 kind: company
 x-status: sunset
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/iex-cloud.png
 tags:
   - Fintech
   - Market Data
@@ -12,15 +24,19 @@ tags:
   - Sunset
   - Historical
 created: '2026-05-08'
-modified: '2026-05-08'
+modified: '2026-07-22'
 specificationVersion: '0.19'
 description: >-
   IEX Cloud was a cloud-based financial data platform from IEX Group offering market data,
   fundamentals, news, options, and reference APIs at https://cloud.iexapis.com/v1. The service
   was sunset on August 31, 2024 by IEX Group. The entry below is preserved as historical
   reference for migration patterns; endpoints are no longer reachable.
-notes: IEX Cloud sunset on 2024-08-31. APIs are no longer reachable. Migrate to alternatives
-  such as Polygon.io, Tiingo, Alpha Vantage, or Finnhub.
+notes: >-
+  IEX Cloud sunset on 2024-08-31. APIs are no longer reachable. Migrate to alternatives
+  such as Polygon.io, Tiingo, Alpha Vantage, or Finnhub. As of 2026-07-22 the iexcloud.io
+  domain has lapsed out of IEX Group's control (www.iexcloud.io serves a Namecheap parking
+  page) - iexcloud.io links below are historical citations, not live provider content. The
+  github.com/iexcloud org (docs + SDKs) and status.iexapis.com remain live.
 apis:
   - aid: iex-cloud:core-data-api
     name: IEX Cloud Core Data API (sunset)
@@ -50,6 +66,8 @@ apis:
       - Historical reference only
       - Migration patterns to successor providers
 common:
+  - type: DomainSecurity
+    url: security/iex-cloud-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/iexcloud
   - type: LinkedIn
@@ -59,7 +77,25 @@ common:
   - type: Sunset Notice
     url: https://iexcloud.io/community/blog/iex-cloud-end-of-life-announcement
   - type: Documentation
-    url: https://iexcloud.io/docs/api
+    url: https://web.archive.org/web/20241003164023/https://iexcloud.io/docs/api/
+  - type: Lifecycle
+    url: lifecycle/iex-cloud-lifecycle.yml
+  - type: StatusPage
+    url: https://status.iexapis.com/
+  - type: Deprecation
+    url: https://web.archive.org/web/20240611120824/https://iexcloud.io/docs/api-basics/deprecation
+  - type: ChangeLog
+    url: changelog/iex-cloud-changelog.yml
+  - type: Authentication
+    url: authentication/iex-cloud-authentication.yml
+  - type: Packages
+    url: packages/iex-cloud-packages.yml
+  - type: SDKs
+    url: packages/iex-cloud-packages.yml
+  - type: WellKnown
+    url: well-known/iex-cloud-well-known.yml
+  - type: LLMsTxt
+    url: llms/iex-cloud-llms.txt
   - type: Plans
     url: plans/iex-cloud-plans-pricing.yml
   - type: RateLimits
