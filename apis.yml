@@ -25,7 +25,7 @@ tags:
   - Historical
 created: '2026-05-08'
 modified: '2026-07-22'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   IEX Cloud was a cloud-based financial data platform from IEX Group offering market data,
   fundamentals, news, options, and reference APIs at https://cloud.iexapis.com/v1. The service
