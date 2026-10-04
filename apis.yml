@@ -2,7 +2,7 @@ aid: iex-cloud
 url: https://raw.githubusercontent.com/api-evangelist/iex-cloud/refs/heads/main/apis.yml
 name: IEX Cloud
 kind: company
-x-status: sunset
+x-status: defunct
 deliveryModel:
   model: saas
   open_source: false
@@ -32,8 +32,8 @@ tags:
 - Market Data
 - Stocks
 - Reference
-- Sunset
 - Historical
+- Defunct
 created: '2026-05-08'
 modified: '2026-09-16'
 specificationVersion: '0.23'
