@@ -135,3 +135,48 @@ plans:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - message
+  - period
+  plans:
+  - name: Launch (sunset)
+    access: freemium
+    model: subscription
+    model_how: derived
+    units:
+    - message
+    - period
+    periods:
+    - month
+  - name: Grow (sunset)
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - message
+    - period
+    periods:
+    - month
+  - name: Scale (sunset)
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - message
+    - period
+    periods:
+    - month
+  - name: Business (sunset)
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - message
+    - period
+    periods:
+    - month
